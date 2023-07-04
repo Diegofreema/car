@@ -27,8 +27,14 @@ const CarCard: FC<CarCardProps> = ({ car }): JSX.Element => {
         {carRent}
         <span className="self-end text-[14px] font-medium">/day</span>
       </p>
-      <div className="relative w-full h-40 my-3 object-contain">
-        <Image src={'/hero.png'} alt="car-image" fill priority />
+      <div className="relative w-full h-40 my-3 ">
+        <Image
+          src={'/hero.png'}
+          alt="car-image"
+          fill
+          priority
+          className="object-contain"
+        />
       </div>
       <div className="relative flex w-full mt-2">
         <div className="flex group-hover:invisible w-full justify-between text-gray-50">
@@ -38,6 +44,7 @@ const CarCard: FC<CarCardProps> = ({ car }): JSX.Element => {
               width={20}
               alt="wheel"
               height={20}
+              priority
             />
             <p className="text-[14px] text-black">
               {transmission === 'a' ? 'Automatic' : 'Manual'}
@@ -48,7 +55,7 @@ const CarCard: FC<CarCardProps> = ({ car }): JSX.Element => {
             <p className="text-[14px] text-black">{drive.toUpperCase()}</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
-            <Image src={'/gas.svg'} width={20} alt="gas" height={20} />
+            <Image src={'/gas.svg'} width={20} alt="gas" height={20} priority />
             <p className="text-[14px] text-black">{city_mpg} MPG</p>
           </div>
         </div>

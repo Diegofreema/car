@@ -72,6 +72,7 @@ export default function Home() {
                   height={50}
                   className="object-contain"
                   alt="loader"
+                  priority
                 />
               </div>
             )}
